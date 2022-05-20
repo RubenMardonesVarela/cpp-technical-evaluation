@@ -1,0 +1,6 @@
+[submodule "thirdparty/googletest"]
+	path = thirdparty/googletest
+	url = ../../google/googletest.git
+[submodule "thirdparty/spdlog"]
+	path = thirdparty/spdlog
+	url = ../../gabime/spdlog
