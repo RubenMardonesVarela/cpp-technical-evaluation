@@ -53,7 +53,7 @@ public:
 
   /**
    * \brief      Set queue to stop state and notifies
-   *             that there is a new frame through a condition
+   *             that the queue is stopped with a condition
    *             variable.
    * \note       This method is thread safe.
    */
