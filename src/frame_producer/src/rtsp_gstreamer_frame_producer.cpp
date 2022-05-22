@@ -42,13 +42,13 @@ void RtspGStreamerFrameProducer::Stop() {
     gst_element_set_state(mpGstPipeline, GST_STATE_NULL);
     g_object_unref(mpGstPipeline);
     mpGstPipeline = nullptr;
+    spdlog::get(ID_LOG)->info("Stopped frame producer from " + mRtspStream);
   }
   if (mpSink) {
     g_object_unref(mpSink);
     mpSink = nullptr;
   }
   mFrameQueue.StopAndNotify();
-  spdlog::get(ID_LOG)->info("Stopped frame producer from " + mRtspStream);
 }
 
 GstFlowReturn RtspGStreamerFrameProducer::CallbackNewSample(GstAppSink *appsink,
